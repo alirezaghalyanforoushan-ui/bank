@@ -78,7 +78,7 @@ echo LM Studio Thinking: controlled only by the loaded model settings
 echo PDF drag-and-drop limit: 100 MB per file in Streamlit; the app reads up to 50 MB per PDF by default.
 echo Resource discovery: Fast mode is default ^(parallel search, top 10 candidates only^).
 echo.
-"%VENV_PY%" -m streamlit run "app_optimized.py" --server.maxUploadSize 100
+"%VENV_PY%" -m streamlit run "app_optimized.py" --server.maxUploadSize 100 --server.address 0.0.0.0
 set "APP_EXIT=%ERRORLEVEL%"
 
 if "%APP_EXIT%"=="0" goto done
